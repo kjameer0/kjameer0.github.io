@@ -1,6 +1,9 @@
+This is just my personal website, it's not an app.
+
 # Drop-in Replacement for [CRA](http://create-react-app.dev/) but powered by [Vite](https://vitejs.dev/)
 
 ### Things in CRA, supported here:
+
 - Import SVG's directly as React Component via SVGR
 - Unit Testing via Jest & React Testing Library
 - ESLint Rules & Prettier
@@ -10,12 +13,14 @@
 ---
 
 ### Extra Additions
+
 - Conventional Commits using `Commitlint`
-- Run Lint Checks, TS Checks, Formatting & Unit Tests  in Pre-commit via `lintstaged` & `husky`
+- Run Lint Checks, TS Checks, Formatting & Unit Tests in Pre-commit via `lintstaged` & `husky`
 
 ---
 
 ### Usage (with [degit](https://github.com/Rich-Harris/degit))
+
 ```bash
 degit uchihamalolan/vite-react-ts your-app-name
 ```
@@ -23,6 +28,7 @@ degit uchihamalolan/vite-react-ts your-app-name
 ---
 
 ### Tech Stack - Overview
+
 - Vite
 - React - Typscript
   - react-error-boundary
@@ -38,6 +44,7 @@ degit uchihamalolan/vite-react-ts your-app-name
 ---
 
 ### Lint and Formatting
+
 - Eslint & Prettier Configured
 - Lints
   - react
@@ -48,11 +55,13 @@ degit uchihamalolan/vite-react-ts your-app-name
 ---
 
 ### Testing
+
 - Jest + React Testing Library (plus some plugins)
 
 ---
 
 ### Styling
+
 - TailwindCSS v3
 
 ---
@@ -60,10 +69,12 @@ degit uchihamalolan/vite-react-ts your-app-name
 # Other Recommended Libraries:
 
 ### Forms
+
 - React Hook Form
 - Zod (for validations)
 
 ### CSS-in-js
+
 - Emotion
 - Complie Time Atomic CSS-in-Js
   - Stylex (Facebook, not Open Source yet)
@@ -71,25 +82,30 @@ degit uchihamalolan/vite-react-ts your-app-name
   - Compiled (still in beta)
 
 ### Routing
+
 - React-Router-Dom
 - React Location
 
 ### Date Manipulation
+
 - Dayjs
 - date-fns
 - Luxon
 
 ### HTTP Client
+
 - Ky
 - Axios
 
 ### Global Store (full-blown / lite-version)
+
 - Redux Toolkit / Zustand
 - Recoil / Jotai
 - Mobx / Valtio
 - xstate / robot
 
 ### Server State
+
 - React Query
 - SWR
 - RTKQuery
