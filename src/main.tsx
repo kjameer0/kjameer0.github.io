@@ -1,18 +1,28 @@
 // react tools
 import { createRoot } from 'react-dom/client';
-import { StrictMode } from 'react';
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import 'tailwindcss/tailwind.css';
-
+import ErrorPage from 'components/ErrorPage';
 import App from './App';
-
+import Home from 'components/Home';
+export const baseUrl = '/';
+const router = createBrowserRouter([
+  {
+    path: baseUrl,
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: baseUrl + '',
+        element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+    ],
+  },
+]);
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
-  root.render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  );
+  root.render(<RouterProvider router={router} />);
 }
