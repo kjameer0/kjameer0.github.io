@@ -7,7 +7,7 @@ const links = [
 
 export default function NavBar() {
   return (
-    <nav>
+    <nav className="nav-bar">
       <ul id="nav-bar-ul">
         {links.map((component, idx) => {
           return <NavItem key={idx} name={component[0]} url={component[1]} />;
