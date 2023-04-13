@@ -1,15 +1,12 @@
-import { Header } from 'components/Header';
-import { Button } from 'components/Button';
+import { Outlet } from 'react-router-dom';
 import { ReactComponent as Logo } from 'assets/favicon.svg';
 import { StrictMode } from 'react';
-
+import { AppBar } from '@mui/material';
 function App() {
   return (
     <StrictMode>
       <div className="App">
-        <Header title="hola" />
-        <Logo height={100} width={100} />
-        <Button onClick={() => alert('hola')}>Heyo</Button>
+        <Outlet />
       </div>
     </StrictMode>
   );

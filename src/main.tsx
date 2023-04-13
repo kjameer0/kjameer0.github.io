@@ -5,6 +5,8 @@ import './index.css';
 import 'tailwindcss/tailwind.css';
 import ErrorPage from 'components/ErrorPage';
 import App from './App';
+import NavBar from 'components/NavBar';
+import About from 'components/About';
 import Home from 'components/Home';
 export const baseUrl = '/';
 const router = createBrowserRouter([
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: baseUrl + '',
         element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: baseUrl + 'about',
+        element: <About />,
         errorElement: <ErrorPage />,
       },
     ],
