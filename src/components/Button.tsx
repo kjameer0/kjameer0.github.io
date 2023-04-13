@@ -5,7 +5,7 @@ interface ButtonProps {
 
 export function Button({ onClick, children }: ButtonProps) {
   return (
-    <button className="bg-gray-400" onClick={onClick}>
+    <button className="bg-gray-500" onClick={onClick}>
       {children}
     </button>
   );
