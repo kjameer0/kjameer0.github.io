@@ -23,7 +23,8 @@
     "prepare": "husky install",
     "commit": "commit",
     "format": "prettier --write --ignore-unknown .",
-    "lint": "eslint --cache ./src"
+    "lint": "eslint --cache ./src",
+    "prepare-commit-msg": "commitlint --edit"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
