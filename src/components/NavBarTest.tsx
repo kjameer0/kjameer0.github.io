@@ -20,15 +20,19 @@ const links = [
   ['Home', ''],
   ['About', 'about'],
 ];
-function NavBarTest() {
+export default function NavBarTest() {
   const [open, setOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setOpen((prev) => !prev);
   };
+  const drawerWidth = 240;
   //opening and closing box for nav menu itself
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: 'center', backgroundColor: 'gray', height: '100%' }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         Navigation
       </Typography>
@@ -44,6 +48,53 @@ function NavBarTest() {
           </ListItem>
         ))}
       </List>
+    </Box>
+  );
+  return (
+    <Box sx={{ display: 'flex', backgroundColor: 'black' }}>
+      <AppBar component={'nav'}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            MUI
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block', backgroundColor: 'black' } }}>
+            {links.map((link) => (
+              <Button key={link[0]} sx={{ color: '#fff' }}>
+                {link[0]}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          variant="temporary"
+          open={open}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
     </Box>
   );
 }

@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import { ReactComponent as Logo } from 'assets/favicon.svg';
 import { StrictMode } from 'react';
-import { AppBar } from '@mui/material';
+import NavBarTest from 'components/NavBarTest';
 function App() {
   return (
     <StrictMode>
+      <NavBarTest />
       <div className="App">
         <Outlet />
       </div>
