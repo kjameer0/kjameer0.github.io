@@ -5,10 +5,10 @@ import './index.css';
 import 'tailwindcss/tailwind.css';
 import ErrorPage from 'components/ErrorPage';
 import App from './App';
-import NavBar from 'components/NavBar';
 import About from 'components/About';
 import Home from 'components/Home';
-export const baseUrl = '/';
+import { StrictMode } from 'react';
+import { baseUrl } from 'utils/url';
 const router = createBrowserRouter([
   {
     path: baseUrl,
@@ -31,5 +31,9 @@ const router = createBrowserRouter([
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
-  root.render(<RouterProvider router={router} />);
+  root.render(
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  );
 }

@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { baseUrl } from 'main';
+import { baseUrl } from 'utils/url';
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -42,7 +42,7 @@ export default function NavBarTest() {
           <ListItem key={link[0]}>
             <NavLink to={baseUrl + link[1]}>
               <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={link[0]} />
+                <ListItemText primary={link[0]} sx={{ color: 'black' }} />
               </ListItemButton>
             </NavLink>
           </ListItem>
