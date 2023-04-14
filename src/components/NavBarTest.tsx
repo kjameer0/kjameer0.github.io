@@ -52,7 +52,7 @@ export default function NavBarTest() {
   );
   return (
     <Box sx={{ display: 'flex', backgroundColor: 'black' }}>
-      <AppBar component={'nav'}>
+      <AppBar component={'nav'} sx={{ backgroundColor: 'navy' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -70,10 +70,10 @@ export default function NavBarTest() {
           >
             MUI
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block', backgroundColor: 'black' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {links.map((link) => (
               <Button key={link[0]} sx={{ color: '#fff' }}>
-                {link[0]}
+                <NavLink to={baseUrl + link[1]}>{link[0]}</NavLink>
               </Button>
             ))}
           </Box>
