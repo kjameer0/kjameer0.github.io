@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -68,12 +67,14 @@ export default function NavBarTest() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Khalid Jameer
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {links.map((link) => (
-              <Button key={link[0]} sx={{ color: '#fff' }}>
-                <NavLink to={baseUrl + link[1]}>{link[0]}</NavLink>
+              <Button key={link[0]} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
+                <NavLink style={{ padding: '1.2rem', margin: '-1.2rem' }} to={baseUrl + link[1]}>
+                  {link[0]}
+                </NavLink>
               </Button>
             ))}
           </Box>

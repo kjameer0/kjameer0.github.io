@@ -26,3 +26,7 @@ nav {
   position: sticky;
   top: 10px;
 }
+.Button > a:hover {
+  background-color: aqua;
+  color: black;
+}
