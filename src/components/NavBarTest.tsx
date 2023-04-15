@@ -1,4 +1,5 @@
 import { useState } from 'react';
+//mui components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -12,7 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+//utils
 import { baseUrl } from 'utils/url';
+//react router
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -21,7 +24,7 @@ const links = [
 ];
 export default function NavBarTest() {
   const [open, setOpen] = useState(false);
-
+  //set drawer to close
   const handleDrawerToggle = () => {
     setOpen((prev) => !prev);
   };
@@ -38,12 +41,23 @@ export default function NavBarTest() {
       <Divider />
       <List>
         {links.map((link) => (
-          <ListItem key={link[0]}>
-            <NavLink to={baseUrl + link[1]}>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={link[0]} sx={{ color: 'black' }} />
-              </ListItemButton>
-            </NavLink>
+          <ListItem key={link[0]} sx={{ border: '1px solid white' }}>
+            <ListItemButton sx={{ textAlign: 'center', margin: '-1rem -2rem' }}>
+              <NavLink
+                to={baseUrl + link[1]}
+                style={{
+                  padding: `1rem 0rem`,
+                  margin: '0rem 0rem',
+                  width: '100%',
+                }}
+                className={'nav-link'}
+              >
+                <ListItemText
+                  primary={link[0]}
+                  sx={{ color: 'black', fontSize: '1.2rem !important' }}
+                />
+              </NavLink>
+            </ListItemButton>
           </ListItem>
         ))}
       </List>

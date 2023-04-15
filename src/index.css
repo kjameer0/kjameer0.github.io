@@ -30,3 +30,11 @@ nav {
   background-color: aqua;
   color: black;
 }
+
+.nav-link:hover {
+  background-color: white;
+  color: skyblue;
+}
+.MuiListItemText-primary{
+  font-size: 1.3rem !important;
+}
