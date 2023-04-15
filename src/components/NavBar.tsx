@@ -22,7 +22,7 @@ const links = [
   ['Home', ''],
   ['About', 'about'],
 ];
-export default function NavBarTest() {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
   //set drawer to close
   const handleDrawerToggle = () => {
