@@ -28,32 +28,38 @@ nav {
 .main-container {
   margin-top: 4rem;
 }
+
 .page-container {
   display: flex;
   flex-wrap: wrap;
 }
+
+.para-container {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .content-paragraph{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  width: 60%;
+  margin: 1rem;
 }
 .page-container > * {
   flex-basis: 100%;
 }
-.para-container {
-  margin-top: 1.2rem;
-  display:flex;
-  justify-content: center;
-}
-.para-container > p {
-  width: 60%;
-  font-size: 1.3rem;
-}
+
 #self-picture-div {
   display: flex;
   justify-content: center;
 }
+
 .main-heading {
   text-align: center;
+  font-size: 3rem;
 }
+
 .Button > a:hover {
   background-color: aqua;
   color: black;
@@ -63,6 +69,7 @@ nav {
   background-color: white;
   color: skyblue;
 }
+
 .MuiListItemText-primary{
   font-size: 1.3rem !important;
 }

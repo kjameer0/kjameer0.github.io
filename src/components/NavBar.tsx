@@ -86,7 +86,10 @@ export default function NavBar() {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {links.map((link) => (
               <Button key={link[0]} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
-                <NavLink style={{ padding: '1.2rem', margin: '-1.2rem' }} to={baseUrl + link[1]}>
+                <NavLink
+                  style={{ padding: '1.2rem', margin: '-1.2rem', fontSize: '1.1rem' }}
+                  to={baseUrl + link[1]}
+                >
                   {link[0]}
                 </NavLink>
               </Button>

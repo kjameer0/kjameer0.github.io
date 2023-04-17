@@ -1,11 +1,7 @@
-import { baseUrl } from 'utils/url';
-
 export default function Home() {
   return (
     <div className="page-container">
-      <h1 className="main-heading" style={{ fontSize: '3rem' }}>
-        Welcome!
-      </h1>
+      <h1 className="main-heading">Welcome!</h1>
       <div className="img-container">
         <div id="self-picture-div">
           <img src="/Khalid-picture.jpg" alt="me" width="600" height="700" />
