@@ -1,4 +1,14 @@
+import ProjectCard from './reusables/ProjectCard';
+import { ProjectInfo } from 'utils/types';
 export default function Home() {
+  const props: ProjectInfo = {
+    name: 'project',
+    description: 'sample',
+    lastCommit: 'yesterday',
+    repoLink: 'lol.com',
+    imgLink: 'ss.com',
+    codeSandboxLink: 'hi.com',
+  };
   return (
     <div className="page-container">
       <h1 className="main-heading">Welcome!</h1>
@@ -14,6 +24,7 @@ export default function Home() {
             content that they are trying to master. Check out my newest small projects in the
             Experiments tab, and check out the Projects tab to see my bigger undertakings.
           </p>
+          <ProjectCard props={props} />
         </div>
       </div>
     </div>
