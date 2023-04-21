@@ -5,12 +5,13 @@ export default function ProjectCard({
   props: ProjectInfo;
 }) {
   return (
-    <>
-      <p>{name}</p>
+    <div>
+      <h2>{name}</h2>
+      <img src={imgLink} alt={name} />
       <p>{description}</p>
       <p>{lastCommit}</p>
       <p>{repoLink}</p>
-      <p>{}</p>
-    </>
+      <p>{codeLink}</p>
+    </div>
   );
 }

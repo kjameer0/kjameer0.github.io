@@ -18,10 +18,7 @@ import { baseUrl } from 'utils/url';
 //react router
 import { NavLink } from 'react-router-dom';
 
-const links = [
-  ['Home', ''],
-  ['About', 'about'],
-];
+const links = ['Home', 'About', 'Projects'];
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   //set drawer to close
@@ -41,10 +38,10 @@ export default function NavBar() {
       <Divider />
       <List>
         {links.map((link) => (
-          <ListItem key={link[0]} sx={{ border: '1px solid white' }}>
+          <ListItem key={link} sx={{ border: '1px solid white' }}>
             <ListItemButton sx={{ textAlign: 'center', margin: '-1rem -2rem' }}>
               <NavLink
-                to={baseUrl + link[1]}
+                to={baseUrl + (link === 'Home' ? '' : link.toLowerCase())}
                 style={{
                   padding: `1rem 0rem`,
                   margin: '0rem 0rem',
@@ -53,7 +50,7 @@ export default function NavBar() {
                 className={'nav-link'}
               >
                 <ListItemText
-                  primary={link[0]}
+                  primary={link}
                   sx={{ color: 'black', fontSize: '1.2rem !important' }}
                 />
               </NavLink>
@@ -85,12 +82,12 @@ export default function NavBar() {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {links.map((link) => (
-              <Button key={link[0]} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
+              <Button key={link} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
                 <NavLink
                   style={{ padding: '1.2rem', margin: '-1.2rem', fontSize: '1.1rem' }}
-                  to={baseUrl + link[1]}
+                  to={baseUrl + (link === 'Home' ? '' : link.toLowerCase())}
                 >
-                  {link[0]}
+                  {link}
                 </NavLink>
               </Button>
             ))}
