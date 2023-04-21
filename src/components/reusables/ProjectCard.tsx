@@ -1,6 +1,6 @@
 import { ProjectInfo } from 'utils/types';
 export default function ProjectCard({
-  props: { name, description, lastCommit, repoLink, imgLink, codeSandboxLink },
+  props: { name, description, lastCommit, repoLink, imgLink, codeLink },
 }: {
   props: ProjectInfo;
 }) {

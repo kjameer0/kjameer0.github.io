@@ -4,5 +4,5 @@ export type ProjectInfo = {
   lastCommit: string;
   repoLink: string;
   imgLink: string;
-  codeSandboxLink: string;
+  codeLink: string;
 };
