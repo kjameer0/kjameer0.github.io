@@ -10,8 +10,13 @@ export default function ProjectCard({
       <img src={imgLink} alt={name} />
       <p>{description}</p>
       <p>{lastCommit}</p>
-      <p>{repoLink}</p>
-      <p>{codeLink}</p>
+      <a href={repoLink} rel="noreferrer" target="_blank">
+        {repoLink}
+      </a>
+      <br></br>
+      <a href={codeLink} rel="noreferrer" target="_blank">
+        {codeLink}
+      </a>
     </div>
   );
 }

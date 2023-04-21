@@ -20,6 +20,10 @@ a {
   color: white;
 }
 
+a:visited {
+  color: skyblue;
+}
+
 nav {
   position: sticky;
   top: 10px;
