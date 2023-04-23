@@ -1,10 +1,10 @@
 {
-  "name": "vite-react-ts",
+  "name": "portfolio-site-khalid-jameer",
   "version": "0.0.0",
-  "description": "React Typescript Starter Template with Vite",
+  "description": "Khalid Jameer Portfolio Site",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uchihamalolan/vite-react-ts.git"
+    "url": "git+https://github.com/kjameer0/kjameer0.github.io"
   },
   "keywords": [
     "vite",

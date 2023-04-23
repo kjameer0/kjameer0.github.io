@@ -1,11 +1,11 @@
 import { ProjectInfo } from 'utils/types';
 export default function ProjectCard({
-  props: { name, description, lastCommit, repoLink, imgLink, codeLink },
+  props: { name, description, lastCommit, repoLink, imgLink, codeLink, technologies },
 }: {
   props: ProjectInfo;
 }) {
   return (
-    <div>
+    <div className="project-card">
       <h2>{name}</h2>
       <img src={imgLink} alt={name} />
       <p>{description}</p>

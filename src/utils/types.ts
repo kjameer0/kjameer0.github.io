@@ -5,4 +5,5 @@ export type ProjectInfo = {
   repoLink: string;
   imgLink: string;
   codeLink: string;
+  technologies: string[];
 };
