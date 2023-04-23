@@ -15,7 +15,7 @@ export const PROJECTS: ProjectInfo[] = [
     lastCommit: '',
     repoLink: 'https://github.com/kjameer0/array-visualizer',
     imgLink: '/images/array-16-9.png',
-    codeLink: 'https://kjameer0.github.io/array-visualizer/',
+    codeLink: 'https://codesandbox.io/p/github/kjameer0/array-visualizer/',
     technologies: ['HTML', 'TypeScript', 'CSS'],
   },
 ];
