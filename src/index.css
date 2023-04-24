@@ -16,12 +16,18 @@ p,
 h1,
 h2,
 li,
+strong,
 a {
   color: white;
 }
-
+a {
+  cursor: pointer;
+}
 a:visited {
   color: skyblue;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 nav {

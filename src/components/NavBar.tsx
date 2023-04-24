@@ -17,8 +17,9 @@ import Button from '@mui/material/Button';
 import { baseUrl } from 'utils/url';
 //react router
 import { NavLink } from 'react-router-dom';
-
-const links = ['Home', 'About', 'Projects'];
+//new  nav bar items can be added by appending new item to list after
+//adding route in main.tsx
+const links = ['Home', 'About', 'Projects', 'Experiments'];
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   //set drawer to close

@@ -29,7 +29,12 @@ const router = createBrowserRouter([
       },
       {
         path: baseUrl + 'projects',
-        element: <Projects />,
+        element: <Projects isProject={true} />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: baseUrl + 'experiments',
+        element: <Projects isProject={false} />,
         errorElement: <ErrorPage />,
       },
     ],

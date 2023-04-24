@@ -6,8 +6,9 @@ import { convertRepoStringToTitle } from 'utils/helpers';
 
 //styles for each individual project display
 const StyledProjectCard = styled.div`
-  border: 0px solid red;
-  width: 33%;
+  border: 1px solid white;
+  width: 270px;
+  margin: 1rem 1rem;
   h2 {
     text-align: center;
     font-weight: 800;
@@ -42,12 +43,10 @@ export default function ProjectCard({
         <strong>Last Commit: </strong>
         {lastCommit || 'N/A'}
       </p>
-      <strong>Repo Link: </strong>
       <a href={repoLink} rel="noreferrer" target="_blank">
         Click here to see Repository
       </a>
       <br></br>
-      <strong>Check It Out: </strong>
       <a href={codeLink} rel="noreferrer" target="_blank">
         Click here to see it in action!
       </a>
