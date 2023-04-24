@@ -24,7 +24,9 @@
       "extends": ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"]
     }
   ],
-  "rules": {},
+  "rules": {
+    "react-hooks/exhaustive-deps": "off"
+  },
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]

@@ -1,5 +1,5 @@
 import { ProjectInfo } from 'utils/types';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 //helpers
 import { convertRepoStringToTitle } from 'utils/helpers';
@@ -29,6 +29,24 @@ export default function ProjectCard({
 }: {
   props: ProjectInfo;
 }) {
+  const [lastCommitDate, setLastCommitDate] = useState('');
+  useEffect(() => {
+    async function fetchLastCommit() {
+      try {
+        const repo_url = `https://api.github.com/repos/kjameer0/${name}`;
+        const response = await fetch(repo_url);
+        if (response.ok) {
+          const data = await response.json();
+          setLastCommitDate(data.pushed_at);
+        } else {
+          throw new Error('data not found');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchLastCommit();
+  }, []);
   return (
     <StyledProjectCard>
       <h2>{convertRepoStringToTitle(name)}</h2>
@@ -39,9 +57,11 @@ export default function ProjectCard({
         <strong>Description:</strong> {description}
       </p>
       <p>
-        {' '}
+        <strong>Technologies:</strong> {technologies.join(', ')}
+      </p>
+      <p>
         <strong>Last Commit: </strong>
-        {lastCommit || 'N/A'}
+        {lastCommitDate || 'N/A'}
       </p>
       <a href={repoLink} rel="noreferrer" target="_blank">
         Click here to see Repository
