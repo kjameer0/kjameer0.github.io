@@ -25,19 +25,19 @@ const StyledProjectCard = styled.div`
   }
 `;
 export default function ProjectCard({
-  props: { name, description, lastCommit, repoLink, imgLink, codeLink, technologies },
+  props: { name, description, repoLink, imgLink, codeLink, technologies },
 }: {
   props: ProjectInfo;
 }) {
-  const [lastCommitDate, setLastCommitDate] = useState('');
+  const [lastPushedDate, setlastPushedDate] = useState('');
   useEffect(() => {
-    async function fetchLastCommit() {
+    async function fetchLastPushDate() {
       try {
         const repo_url = `https://api.github.com/repos/kjameer0/${name}`;
         const response = await fetch(repo_url);
         if (response.ok) {
           const data = await response.json();
-          setLastCommitDate(data.pushed_at);
+          setlastPushedDate(data.pushed_at);
         } else {
           throw new Error('data not found');
         }
@@ -45,7 +45,7 @@ export default function ProjectCard({
         console.error(error);
       }
     }
-    fetchLastCommit();
+    fetchLastPushDate();
   }, []);
   return (
     <StyledProjectCard>
@@ -61,7 +61,7 @@ export default function ProjectCard({
       </p>
       <p>
         <strong>Last Commit: </strong>
-        {lastCommitDate || 'N/A'}
+        {lastPushedDate || 'N/A'}
       </p>
       <a href={repoLink} rel="noreferrer" target="_blank">
         Click here to see Repository
