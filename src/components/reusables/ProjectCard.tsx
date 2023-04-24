@@ -1,11 +1,18 @@
 import { ProjectInfo } from 'utils/types';
+import React from 'react';
+import styled from 'styled-components';
+
+//styles for each individual project display
+const StyledProjectCard = styled.div`
+  border: 1px solid red;
+`;
 export default function ProjectCard({
   props: { name, description, lastCommit, repoLink, imgLink, codeLink, technologies },
 }: {
   props: ProjectInfo;
 }) {
   return (
-    <div className="project-card">
+    <StyledProjectCard className="project-card">
       <h2>{name}</h2>
       <img src={imgLink} alt={name} />
       <p>{description}</p>
@@ -17,6 +24,6 @@ export default function ProjectCard({
       <a href={codeLink} rel="noreferrer" target="_blank">
         {codeLink}
       </a>
-    </div>
+    </StyledProjectCard>
   );
 }

@@ -15,7 +15,7 @@ export default function Projects() {
       <h1 className="main-heading">Projects</h1>
       <div className="card-container">
         {PROJECTS.map((project) => {
-          return <ProjectCard key={project.name} props={project} />;
+          return <ProjectCard key={project.name} props={project as ProjectInfo} />;
         })}
       </div>
     </div>
