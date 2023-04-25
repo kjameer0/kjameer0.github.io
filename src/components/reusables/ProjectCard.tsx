@@ -33,11 +33,20 @@ export default function ProjectCard({
   useEffect(() => {
     async function fetchLastPushDate() {
       try {
+        //fetch this projects repo data
         const repo_url = `https://api.github.com/repos/kjameer0/${name}`;
         const response = await fetch(repo_url);
         if (response.ok) {
+          //get the last pushed date and convert it to an easily readable date
           const data = await response.json();
-          setlastPushedDate(data.pushed_at);
+          const date = data.pushed_at;
+          //take take from API and remove punctuation
+          const splitDate = date.split(/-|:|T/);
+          //the year month and day are the first 3 indices of the split array
+          //rearrange those to be mm//dd/yyyy
+          [splitDate[0], splitDate[1], splitDate[2]] = [splitDate[1], splitDate[2], splitDate[0]];
+          //set date to state to save it
+          setlastPushedDate(splitDate.slice(0, 3).join('/'));
         } else {
           throw new Error('data not found');
         }
