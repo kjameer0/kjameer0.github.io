@@ -1,12 +1,17 @@
 import ProjectCard from './reusables/ProjectCard';
 import { ProjectInfo } from 'utils/types';
+import githubIcon from '../../assets/icons/github-mark-white.png';
+import linkedInIcon from '../../assets/icons/LI-In-Bug.png';
+
+import styled from 'styled-components';
+import selfImg from '../../assets/Khalid-picture.jpg';
 export default function Home() {
   return (
     <div className="page-container">
       <h1 className="main-heading">Welcome!</h1>
       <div className="img-container">
         <div id="self-picture-div">
-          <img src="/Khalid-picture.jpg" alt="me" width="600" height="700" />
+          <img src={selfImg} alt="me" width="600" height="700" />
         </div>
         <div className="para-container">
           <p className="content-paragraph">
@@ -17,6 +22,10 @@ export default function Home() {
             Experiments tab, and check out the Projects tab to see my bigger undertakings.
           </p>
         </div>
+      </div>
+      <div className="logo">
+        <img src={githubIcon} width={'100'} height={'100'} alt="github" />
+        <img src={linkedInIcon} width={'100'} height={'100'} alt="LinkedIn" />
       </div>
     </div>
   );
