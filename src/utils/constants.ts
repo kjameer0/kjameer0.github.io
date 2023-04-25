@@ -8,7 +8,7 @@ export const PROJECTS: ProjectInfo[] = [
     repoLink: 'https://github.com/kjameer0/array-visualizer',
     imgLink: '/images/array-16-9.png',
     codeLink: 'https://codesandbox.io/p/github/kjameer0/array-visualizer/',
-    technologies: ['HTML', 'TypeScript', 'CSS'],
+    technologies: ['HTML', 'TypeScript', 'CSS', 'Node.js'],
   },
   {
     name: 'hashmap-visualizer',
@@ -16,7 +16,32 @@ export const PROJECTS: ProjectInfo[] = [
     repoLink: 'https://github.com/kjameer0/hashmap-visualizer',
     imgLink: '/images/binary-tree-16-9.png',
     codeLink: 'https://kjameer0.github.io/hashmap-visualizer/',
-    technologies: ['React', 'TypeScript', 'CSS'],
+    technologies: ['React', 'TypeScript', 'CSS', 'Node.js'],
+  },
+  {
+    name: 'hiitcoin',
+    description: 'Mobile app for designing and timing workouts ',
+    repoLink: 'https://github.com/HIITCoin/HiiTCoin',
+    imgLink: '/icons/React-icon.svg.png',
+    codeLink: '',
+    technologies: ['React Native', 'JavaScript', 'CSS', 'chartjs', 'Firestore', 'Node.js'],
+  },
+  {
+    name: 'anime-merchandise-store',
+    description: 'Teaching tool to visualize data structures',
+    repoLink: 'https://github.com/kjameer0/anime-merchandise-store',
+    imgLink: '/icons/React-icon.svg.png',
+    codeLink: '',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Express',
+      'Material UI',
+      'Postgres',
+      'Sequelize',
+      'Node.js',
+      'CSS',
+    ],
   },
 ];
 export const EXPERIMENTS: ProjectInfo[] = [
@@ -27,7 +52,7 @@ export const EXPERIMENTS: ProjectInfo[] = [
     imgLink: '/icons/React-icon.svg.png',
     codeLink:
       'https://codesandbox.io/p/github/kjameer0/react-ts-fetch-use-effect-testing/main?workspaceId=be7a002c-4dc3-4f79-8b9e-9b24975a0316&file=%2Fsrc%2FApp.tsx',
-    technologies: ['React', 'TypeScript'],
+    technologies: ['React', 'TypeScript', 'Node.js'],
   },
 ];
 

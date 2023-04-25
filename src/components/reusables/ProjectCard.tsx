@@ -76,9 +76,11 @@ export default function ProjectCard({
         Click here to see Repository
       </a>
       <br></br>
-      <a href={codeLink} rel="noreferrer" target="_blank">
-        Click here to see it in action!
-      </a>
+      {codeLink.length > 0 && (
+        <a href={codeLink} rel="noreferrer" target="_blank">
+          Click here to see it in action!
+        </a>
+      )}
     </StyledProjectCard>
   );
 }
