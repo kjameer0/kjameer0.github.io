@@ -1,6 +1,6 @@
 import { ProjectInfo } from './types';
 //all project and experiment data is stored here, except for last
-//pushed daes
+//pushed dates
 export const PROJECTS: ProjectInfo[] = [
   {
     name: 'array-visualizer',
@@ -22,12 +22,12 @@ export const PROJECTS: ProjectInfo[] = [
 export const EXPERIMENTS: ProjectInfo[] = [
   {
     name: 'react-ts-fetch-use-effect-testing',
-    description: 'Test run of HTML and TypeScript with data structure visualizer concept',
+    description: 'Tinkering with using promises and async/await syntax with useEffect',
     repoLink: 'https://github.com/kjameer0/react-ts-fetch-use-effect-testing',
     imgLink: '/icons/React-icon.svg.png',
     codeLink:
       'https://codesandbox.io/p/github/kjameer0/react-ts-fetch-use-effect-testing/main?workspaceId=be7a002c-4dc3-4f79-8b9e-9b24975a0316&file=%2Fsrc%2FApp.tsx',
-    technologies: ['HTML', 'TypeScript', 'CSS'],
+    technologies: ['React', 'TypeScript'],
   },
 ];
 
