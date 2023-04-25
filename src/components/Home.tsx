@@ -24,8 +24,12 @@ export default function Home() {
         </div>
       </div>
       <div className="logo">
-        <img src={githubIcon} width={'100'} height={'100'} alt="github" />
-        <img src={linkedInIcon} width={'100'} height={'100'} alt="LinkedIn" />
+        <a href="https://github.com/kjameer0">
+          <img src={githubIcon} width={'65'} height={'65'} alt="github" />
+        </a>
+        <a href="https://linkedin.com/in/khalidjameer">
+          <img src={linkedInIcon} width={'75'} height={'75'} alt="LinkedIn" />
+        </a>
       </div>
     </div>
   );

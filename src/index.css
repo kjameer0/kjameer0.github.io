@@ -45,10 +45,14 @@ nav {
   justify-content: center;
 }
 .logo {
+  display: flex;
+  justify-content: center;
   margin: auto;
   width: 40%;
-  height: 40px;
-  border: 1px solid red;
+  height: 80px;
+}
+.logo > a {
+  margin:  auto 2rem;
 }
 
 
