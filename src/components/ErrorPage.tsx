@@ -17,7 +17,7 @@ export default function ErrorPage() {
     return (
       <div id="error-page">
         <p>Sorry, an unexpected error has occurred.</p>
-        <p>Unknow type of error</p>
+        <p>Unknown type of error</p>
       </div>
     );
   }
