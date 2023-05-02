@@ -8,6 +8,8 @@ interface Props {
   isProject: boolean;
 }
 export default function Projects({ isProject }: Props) {
+  //check if we're trying to render experiments or
+  //projects based on props passed from router
   const title = isProject ? 'Projects' : 'Experiments';
   const listOfWork = isProject ? PROJECTS : EXPERIMENTS;
 

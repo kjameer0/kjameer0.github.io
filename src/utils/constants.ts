@@ -1,5 +1,4 @@
 import { ProjectInfo } from './types';
-import githubIcon from '../../assets/icons/github-icon.png';
 import reactIcon from '../../assets/icons/React-icon.svg.png';
 import arrayImg from '../../assets/images/array-16-9.png';
 import bTreeImg from '../../assets/images/binary-tree-16-9.png';
@@ -58,6 +57,13 @@ export const EXPERIMENTS: ProjectInfo[] = [
       'https://codesandbox.io/p/github/kjameer0/react-ts-fetch-use-effect-testing/main?workspaceId=be7a002c-4dc3-4f79-8b9e-9b24975a0316&file=%2Fsrc%2FApp.tsx',
     technologies: ['React', 'TypeScript', 'Node.js'],
   },
+  {
+    name: 'react-useeffect-testing-1',
+    description:
+      'Figuring out how useEffect can be used to trigger intentional rerenders and avoid unnecessary ones',
+    repoLink: 'https://github.com/kjameer0/react-useeffect-testing-1',
+    imgLink: reactIcon,
+    codeLink: 'https://codesandbox.io/p/github/kjameer0/react-useeffect-testing-1/main',
+    technologies: ['React', 'TypeScript', 'Node.js'],
+  },
 ];
-
-

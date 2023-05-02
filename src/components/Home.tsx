@@ -1,8 +1,6 @@
-import ProjectCard from './reusables/ProjectCard';
-import { ProjectInfo } from 'utils/types';
 import githubIcon from '../../assets/icons/github-mark-white.png';
 import linkedInIcon from '../../assets/icons/LI-In-Bug.png';
-
+//images and styles
 import styled from 'styled-components';
 import selfImg from '../../assets/Khalid-picture.jpg';
 export default function Home() {
