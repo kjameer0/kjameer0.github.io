@@ -7,19 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  color: white;
 }
-
+a {
+  color: red;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-p,
-h1,
-h2,
-li,
-strong,
-a {
-  color: white;
-}
+
 a {
   cursor: pointer;
 }

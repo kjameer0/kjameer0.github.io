@@ -23,6 +23,12 @@ const StyledProjectCard = styled.div`
     color: white;
     font-weight: 800;
   }
+  a:link {
+    color: lightblue;
+  }
+  a:visited {
+    color: purple;
+  }
 `;
 export default function ProjectCard({
   props: { name, description, repoLink, imgLink, codeLink, technologies },
