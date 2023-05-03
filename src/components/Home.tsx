@@ -22,10 +22,10 @@ export default function Home() {
         </div>
       </div>
       <div className="logo">
-        <a href="https://github.com/kjameer0">
+        <a href="https://github.com/kjameer0" target="_blank" rel="noreferrer">
           <img src={githubIcon} width={'65'} height={'65'} alt="github" />
         </a>
-        <a href="https://linkedin.com/in/khalidjameer">
+        <a href="https://linkedin.com/in/khalidjameer" target="_blank" rel="noreferrer">
           <img src={linkedInIcon} width={'75'} height={'75'} alt="LinkedIn" />
         </a>
       </div>
