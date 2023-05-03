@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import githubIcon from '../../assets/icons/github-mark-white.png';
+import linkedInIcon from '../../assets/icons/LI-In-Bug.png';
 //mui components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -74,14 +76,15 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Khalid Jameer
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box className="logo">
+            <a href="https://github.com/kjameer0" target="_blank" rel="noreferrer">
+              <img src={githubIcon} width={'50'} height={'50'} alt="github" />
+            </a>
+            <a href="https://linkedin.com/in/khalidjameer" target="_blank" rel="noreferrer">
+              <img src={linkedInIcon} width={'55'} height={'55'} alt="LinkedIn" />
+            </a>
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' } }} className={'links'}>
             {links.map((link) => (
               <Button key={link} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
                 <NavLink

@@ -1,12 +1,19 @@
-import githubIcon from '../../assets/icons/github-mark-white.png';
-import linkedInIcon from '../../assets/icons/LI-In-Bug.png';
 //images and styles
 import styled from 'styled-components';
 import selfImg from '../../assets/Khalid-picture.jpg';
 export default function Home() {
   return (
     <div className="page-container">
-      <h1 className="main-heading">Welcome!</h1>
+      <h1 className="main-heading">Khalid Jameer</h1>
+      <h1
+        className="main-heading"
+        style={{
+          display: new Date().getMinutes() === 0 && new Date().getHours() === 2 ? '' : 'none',
+        }}
+      >
+        (BerjermaineHeadass)
+      </h1>
+      <h2 className="sub-heading">Software Engineer</h2>
       <div className="img-container">
         <div id="self-picture-div">
           <img src={selfImg} alt="me" width="600" height="700" />
@@ -20,14 +27,6 @@ export default function Home() {
             Experiments tab, and check out the Projects tab to see my bigger undertakings.
           </p>
         </div>
-      </div>
-      <div className="logo">
-        <a href="https://github.com/kjameer0" target="_blank" rel="noreferrer">
-          <img src={githubIcon} width={'65'} height={'65'} alt="github" />
-        </a>
-        <a href="https://linkedin.com/in/khalidjameer" target="_blank" rel="noreferrer">
-          <img src={linkedInIcon} width={'75'} height={'75'} alt="LinkedIn" />
-        </a>
       </div>
     </div>
   );
