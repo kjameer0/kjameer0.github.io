@@ -66,4 +66,13 @@ export const EXPERIMENTS: ProjectInfo[] = [
     codeLink: 'https://codesandbox.io/p/github/kjameer0/react-useeffect-testing-1/main',
     technologies: ['React', 'TypeScript', 'Node.js'],
   },
+  {
+    name: 'task-stack',
+    description:
+      'learning more about rerendering with react state with tool to track tasks that are contingent on each other',
+    repoLink: 'https://github.com/kjameer0/task-stack',
+    imgLink: reactIcon,
+    codeLink: 'https://codesandbox.io/p/github/kjameer0/task-stack/main',
+    technologies: ['React', 'TypeScript', 'Node.js', 'styled-components'],
+  },
 ];
