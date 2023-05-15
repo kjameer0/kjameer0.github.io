@@ -9,9 +9,6 @@ body {
   background-color: black;
   color: white;
 }
-a {
-  color: red;
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -23,7 +20,7 @@ a:visited {
   color: skyblue;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 nav {
@@ -50,7 +47,59 @@ nav {
 .logo > a {
   margin:  auto 2rem;
 }
+.pseudo {
+  background-color: white;
+  position: relative;
+  width: 0%;
+  height: 2px;
+}
+@keyframes top-border-nav {
+  from {
+    width: 0%;
+  } to {
+    width: 100%;
+  }
+}
+@keyframes bottom-border-nav {
+  from {
+    width: 100%;
+  } to {
+    width: 0%;
+  }
+}
+a:hover > .pseudo-top {
+  background-color: white;
+  width: 100%;
+  animation-name: top-border-nav;
+  animation-duration: 0.5s;
+}
+.pseudo-bottom {
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
 
+.pseudo-bottom{
+  background-color: white;
+  width: 100%;
+}
+
+.pseudo-bottom::before {
+  content: "";
+  display: inline-block;
+  z-index: 23;
+  position: relative;
+  width: 100%;
+  top: -19px;
+  left: 0px;
+  background-color: navy;
+  height: 5px;
+}
+a:hover > .pseudo-bottom::before {
+  width: 0%;
+  animation-name: bottom-border-nav;
+  animation-duration: 0.5s;
+}
 
 .para-container {
   margin-top: 1.2rem;
@@ -78,10 +127,6 @@ nav {
   font-size: 3rem;
 }
 
-.Button > a:hover {
-  background-color: aqua;
-  color: black;
-}
 
 .nav-link:hover {
   background-color: white;

@@ -85,10 +85,17 @@ export default function NavBar() {
             {links.map((link) => (
               <Button key={link} sx={{ color: '#fff', padding: '1.2rem' }} className="Button">
                 <NavLink
-                  style={{ padding: '1.2rem', margin: '-1.2rem', fontSize: '1.1rem' }}
+                  style={{
+                    padding: '1.2rem',
+                    margin: '-1.2rem',
+                    fontSize: '1.1rem',
+                    position: 'relative',
+                  }}
                   to={baseUrl + (link === 'Home' ? '' : link.toLowerCase())}
                 >
+                  <div className="pseudo pseudo-top"></div>
                   {link}
+                  <div className="pseudo pseudo-bottom"></div>
                 </NavLink>
               </Button>
             ))}
