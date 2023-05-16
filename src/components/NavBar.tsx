@@ -47,6 +47,7 @@ export default function NavBar() {
                   padding: `1rem 0rem`,
                   margin: '0rem 0rem',
                   width: '100%',
+                  fontFamily: 'General Sans semibold !important',
                 }}
                 className={'nav-link'}
               >
@@ -62,8 +63,8 @@ export default function NavBar() {
     </Box>
   );
   return (
-    <Box sx={{ display: 'flex', backgroundColor: 'black' }}>
-      <AppBar component={'nav'} sx={{ backgroundColor: 'navy' }}>
+    <Box sx={{ display: 'flex' }}>
+      <AppBar component={'nav'} sx={{ backgroundColor: 'orange' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -77,9 +78,17 @@ export default function NavBar() {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: 'none',
+                sm: 'block',
+                color: 'black',
+                fontFamily: 'general sans semibold',
+              },
+            }}
           >
-            Khalid Jameer
+            {'Khalid Jameer'.toUpperCase()}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {links.map((link) => (
@@ -90,11 +99,13 @@ export default function NavBar() {
                     margin: '-1.2rem',
                     fontSize: '1.1rem',
                     position: 'relative',
+                    color: 'black',
+                    textTransform: "lowercase"
                   }}
                   to={baseUrl + (link === 'Home' ? '' : link.toLowerCase())}
                 >
                   <div className="pseudo pseudo-top"></div>
-                  {link}
+                  <p>{link}</p>
                   <div className="pseudo pseudo-bottom"></div>
                 </NavLink>
               </Button>

@@ -1,9 +1,8 @@
 @import './styles/reset.css';
-
 body {
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Gambetta', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
@@ -15,6 +14,7 @@ code {
 
 a {
   cursor: pointer;
+  font-family: 'general sans semibold';
 }
 a:visited {
   color: skyblue;
@@ -24,6 +24,7 @@ a:hover {
 }
 
 nav {
+  font-family: 'General Sans', sans-serif;
   position: sticky;
   top: 10px;
 }
@@ -36,6 +37,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 70px;
 }
 .logo {
   display: flex;
@@ -92,7 +94,7 @@ a:hover > .pseudo-top {
   width: 100%;
   top: -19px;
   left: 0px;
-  background-color: navy;
+  background-color: orange;
   height: 5px;
 }
 a:hover > .pseudo-bottom::before {
@@ -106,6 +108,7 @@ a:hover > .pseudo-bottom::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .content-paragraph{
@@ -120,6 +123,9 @@ a:hover > .pseudo-bottom::before {
 #self-picture-div {
   display: flex;
   justify-content: center;
+}
+#self-picture-div img {
+  border-radius: 25%;
 }
 
 .main-heading {
